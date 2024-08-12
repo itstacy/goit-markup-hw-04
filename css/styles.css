@@ -23,6 +23,10 @@ img {
 /* #region Header */
 .header {
     border-bottom: 1px solid #e7e9fc;
+    box-shadow: 
+        0px 2px 1px rgba(46, 47, 66, 0.08),   /* Перша тінь */
+        0px 1px 1px rgba(46, 47, 66, 0.16),   /* Друга тінь */
+        0px 1px 6px rgba(46, 47, 66, 0.08);   /* Третя тінь */
 }
 .header .container {
     display: flex;
@@ -68,7 +72,12 @@ img {
 .menu-item {
     margin-right: 40px; /* Відступ між пунктами меню */
 }
-
+.menu-item:first-child .menu-link {
+    position: relative;
+    color: #404bbf;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+}
 .menu-item:last-child {
     margin-right: 0; /* Обнулення відступу для останнього пункту */
 }
@@ -103,7 +112,19 @@ img {
     padding-top: 24px;
     padding-bottom: 24px;
 }
+.address-link .contact-link:first-child {
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.address-link .contact-link:nth-child(2) {
+    color: #434455;
+    text-decoration: none;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 
+.address-link .contact-link:nth-child(2):hover,
+.address-link .contact-link:nth-child(2):focus {
+    color: #404bbf;
+}
 .contact-link {
     font-size: 16px;
     line-height: 1.5;
@@ -125,12 +146,16 @@ img {
 /* #region Hero */
 .hero {
     background-color: #2E2F42;
-    width: 1440px;
     height: 600px;
     padding: 188px 0;
-    background-image: linear-gradient(rgba(46, 47, 66, 0.7),rgba(46, 47, 66, 0.7)), url(../images/people-office\ 1.jpg);
+    background-image: 
+        linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), /* Градієнт для затемнення */
+        url(../images/img-name.jpeg);
     background-size: 1440px 600px;
+    background-repeat: no-repeat;
+    max-width: 1440px;
     background-size: cover;
+    background-position: center;
 }
 .container-hero {
     padding-top: 188px;
@@ -168,6 +193,7 @@ img {
     display: block; /* Додаємо display: block для центрування */
     margin-left: auto; /* Центруємо кнопку */
     margin-right: auto;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .hero-btn:hover,
 .hero-btn:focus {
@@ -275,7 +301,7 @@ img {
 }
 .link-item-list:hover svg,
 .link-item-list:focus svg {
-    background-color: ;
+    background-color: green;
 }
 .portfolio {
     padding-top: 120px;
