@@ -262,6 +262,11 @@ img {
 .our-team-ul {
     display: flex;
     gap: 24px;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
 }
 
 .person {
@@ -280,15 +285,26 @@ img {
     letter-spacing: 0.02em;
     text-align: center;
 }
-
+.social-links-list {
+    display: flex; /* Розміщення іконок в рядок */
+    justify-content: center; /* Центрування іконок */
+    gap: 24px; /* Відступи між іконками */
+    padding: 0;
+    margin: 0;
+}
 .team-member-one {
     background-color: #FFFFFF; /* Фон для пункту списку */
     width: calc((100%-72px)/4);
     border-radius: 0 0 4px 4px;
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 
+                0px 1px 1px rgba(46, 47, 66, 0.16), 
+                0px 2px 1px rgba(46, 47, 66, 0.08);
+                overflow: hidden;
 }
 .team-box {
     padding-top: 32px;
     padding-bottom: 32px;
+    text-align: center;
 }
 .link-item-list {
     display: flex;
