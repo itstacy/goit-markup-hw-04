@@ -349,6 +349,10 @@ img {
 .link-item-list:focus svg {
     background-color: green;
 }
+
+
+
+
 .portfolio {
     padding-top: 120px;
     padding-bottom: 120px;
@@ -367,9 +371,53 @@ img {
     display: flex;
     flex-wrap: wrap;
     gap: 48px 24px;
+    list-style: none; /* Вимкнути маркери списку */
+    padding: 0; /* Внутрішні відступи списку */
+    margin: 0; /* Зовнішні відступи списку */
 }
 .portfolio-item {
-    width: calc((100% - 48px) / 3); /* Ширина для першого пункту списку */
+    width: calc((100% - 48px) / 3); /* Розрахунок ширини для кожного елемента */
+    border: 1px solid #ddd; /* Легка межа навколо зображення */
+    border-radius: 8px; /* Закруглені кути */
+    overflow: hidden; /* Приховати частини елемента, що виходять за межі */
+    background-color: #fff; /* Білий фон */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Легка тінь для підняття */
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 0.3s ease, box-shadow 0.3s ease;
+}
+.portfolio-item:hover {
+    transform: translateY(-10px); /* Легке підняття при ховері */
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08); /* Тінь при ховері */
+}
+.portfolio-item > div.container-for-image {
+    position: relative; /* Встановлення позиціонування */
+    overflow: hidden; /* Приховування частин, що виходять за межі */
+}
+
+/* Стиль параграфа всередині контейнера */
+.portfolio-item > div.container-for-image > p {
+    position: absolute; /* Абсолютне позиціонування */
+    top: 0; /* Вирівнювання по верхній межі */
+    left: 0; /* Вирівнювання по лівій межі */
+    width: 100%; /* Ширина на 100% батьківського контейнера */
+    height: 100%; /* Висота на 100% батьківського контейнера */
+    padding: 40px 32px; /* Внутрішні відступи */
+    background-color: #4d5ae5; /* Колір фону */
+    color: #f4f4fd; /* Колір тексту */
+    font-size: 16px; /* Розмір шрифту */
+    line-height: 1.5; /* Висота рядка */
+    letter-spacing: 0.02em; /* Відстань між літерами */
+    transform: translateY(100%); /* Переміщення елемента вниз */
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1); /* Плавна анімація */
+}
+
+/* Стиль параграфа при ховері на картку */
+.portfolio-item:hover > div.container-for-image > p {
+    transform: translateY(0%); /* Повернення елемента на місце */
+}
+
+/* Стиль для конкретного тексту в параграфах (вміст) */
+.portfolio-item > div.container-for-image > p::before {
+    content: "14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App";
 }
 .portfolio-box {
     padding: 32px 16px;
