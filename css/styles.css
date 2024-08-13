@@ -501,23 +501,27 @@ img {
 }
 
 /* #region Footer */
+/* Основной стиль футера */
 .footer {
     background-color: #2e2f42; /* Темный фон футера */
     padding-top: 100px; /* Отступ сверху */
     padding-bottom: 100px; /* Отступ снизу */
 }
 
+/* Контейнер футера */
 .footer-container {
+    display: flex; /* Размещение элементов по горизонтали */
     justify-content: space-between; /* Разделение пространства между блоками */
-    align-items: baseline;
-    display: flex;
+    align-items: baseline; /* Выровнять элементы по базовой линии */
+    flex-wrap: wrap; /* Перенос элементов на новую строку, если необходимо */
 }
 
+/* Информация футера */
 .footer-info {
     margin-right: 120px; /* Отступ справа для разделения элементов */
-    
 }
 
+/* Логотип футера */
 .logo-footer {
     font-family: "Raleway", sans-serif; /* Шрифт логотипа */
     font-weight: 700; /* Толщина шрифта */
@@ -530,10 +534,12 @@ img {
     display: inline-block; /* Блочный элемент для возможности центрирования */
 }
 
+/* Часть логотипа */
 .studio-footer {
     color: #f4f4fd; /* Цвет текста */
 }
 
+/* Описание футера */
 .footer-description {
     line-height: 1.5; /* Межстрочный интервал */
     color: #F4F4FD; /* Цвет текста */
@@ -544,30 +550,36 @@ img {
     margin-bottom: 16px;
 }
 
+/* Контейнер социальных медиа */
 .social-media-container {
     display: flex; /* Размещение элементов по горизонтали */
     flex-direction: column; /* Вертикальное размещение дочерних элементов */
     align-items: flex-end; /* Выравнивание по правому краю */
 }
 
+/* Заголовок социальных медиа */
 .social-media-title {
     font-weight: 500; /* Жирность шрифта */
     font-size: 16px; /* Размер шрифта */
     line-height: 1.5; /* Межстрочный интервал */
     letter-spacing: 0.02em; /* Расширение между буквами */
     color: var(--text-color, #FFFFFF); /* Цвет текста через CSS переменную */
-    margin-bottom: 16px;
+    margin-bottom: 16px; /* Отступ снизу */
 }
 
+/* Список социальных медиа */
 .social-media-list {
     display: flex; /* Размещение элементов по горизонтали */
     gap: 16px; /* Расстояние между элементами списка */
 }
 
+/* Элемент списка социальных медиа */
 .social-media-item {
     width: 40px; /* Ширина элемента */
     height: 40px; /* Высота элемента */
 }
+
+/* Ссылка на социальные медиа */
 .social-media-link {
     width: 100%; /* Ширина ссылки */
     height: 100%; /* Высота ссылки */
@@ -579,11 +591,13 @@ img {
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); /* Плавное изменение цвета фона */
 }
 
+/* Стили при наведении на ссылки социальных медиа */
 .social-media-link:hover,
 .social-media-link:focus {
     background-color: #31d0aa; /* Цвет фона при наведении и фокусе */
 }
 
+/* Иконки социальных медиа */
 .social-icon {
     fill: var(--icon-color, #f4f4fd); /* Цвет иконок через CSS переменную */
 }
