@@ -563,7 +563,7 @@ img {
     line-height: 1.5; /* Межстрочный интервал */
     letter-spacing: 0.02em; /* Расширение между буквами */
     color: var(--text-color, #FFFFFF); /* Цвет текста через CSS переменную */
-    margin-bottom: 16px !important; /* Отступ снизу */
+    margin-bottom: 16px; /* Отступ снизу */
 }
 
 /* Список социальных медиа */
