@@ -21,6 +21,8 @@ img {
     display: block;
 }
 /* #region Header */
+/* Стиль для хедера */
+/* Стиль для хедера */
 .header {
     border-bottom: 1px solid #e7e9fc;
     box-shadow: 
@@ -28,19 +30,19 @@ img {
         0px 1px 1px rgba(46, 47, 66, 0.16),   /* Друга тінь */
         0px 1px 6px rgba(46, 47, 66, 0.08);   /* Третя тінь */
 }
+
+/* Стиль для контейнера хедера */
 .header .container {
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid #e7e9fc;
     margin: 0 auto;
-}
-
-.container {
     width: 1158px;
     padding-left: 15px;
     padding-right: 15px;
-    margin: 0 auto;
 }
+
+/* Стиль для навігаційного блоку */
 .nav-header {
     display: flex;
     align-items: center;
@@ -69,18 +71,38 @@ img {
     display: flex;
     gap: 40px;
 }
+
 .menu-item {
     margin-right: 40px; /* Відступ між пунктами меню */
 }
+
+/* Псевдоелемент для підкреслення під першим пунктом меню */
 .menu-item:first-child .menu-link {
-    position: relative;
-    color: #404bbf;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    
+    position: relative; /* Позиціонування відносно батьківського елемента */
+    color: #404bbf; /* Колір тексту */
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1); /* Плавна зміна кольору */
 }
-.menu-item:last-child {
-    margin-right: 0; /* Обнулення відступу для останнього пункту */
+
+.menu-item:first-child .menu-link::after {
+    content: ''; /* Встановлює вміст псевдоелемента як порожній рядок */
+    position: absolute; /* Позиціювання відносно батьківського елемента */
+    left: 0; /* Відстань від лівого краю */
+    bottom: -1px; /* Відстань від нижнього краю */
+    width: 100%; /* Ширина підкреслення */
+    height: 4px; /* Висота підкреслення */
+    background-color: #404bbf; /* Колір фону підкреслення */
+    border-radius: 2px; /* Закруглення кутів */
+    transform: scaleX(0); /* Початковий стан невидимий */
+    transition: transform 0.3s ease; /* Анімація трансформації */
 }
+
+/* Показувати підкреслення при наведенні для першого пункту меню */
+.menu-item:first-child .menu-link:hover::after,
+.menu-item:first-child .menu-link:focus::after {
+    transform: scaleX(1); /* Показати підкреслення */
+}
+
+/* Загальний стиль для меню посилань */
 .menu-link {
     font-weight: 500;
     font-size: 16px;
@@ -95,7 +117,7 @@ img {
 
 .menu-link:hover,
 .menu-link:focus {
-    color: #404bbf;
+    color: #404bbf; /* Колір при наведенні */
 }
 
 /* Стилі для address в хедері */
@@ -106,25 +128,18 @@ img {
     letter-spacing: 0.02em;
     color: #434455;
 }
+
 .address-link {
     display: flex;
     gap: 40px;
     padding-top: 24px;
     padding-bottom: 24px;
 }
-.address-link .contact-link:first-child {
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.address-link .contact-link:nth-child(2) {
-    color: #434455;
-    text-decoration: none;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+.address-link .contact-link {
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1); /* Плавна зміна кольору */
 }
 
-.address-link .contact-link:nth-child(2):hover,
-.address-link .contact-link:nth-child(2):focus {
-    color: #404bbf;
-}
 .contact-link {
     font-size: 16px;
     line-height: 1.5;
@@ -133,12 +148,14 @@ img {
     margin-right: 40px;
     display: flex;
 }
+
 .contact-link:last-child {
     margin-right: 0; /* Обнулення відступу для останнього пункту */
 }
+
 .contact-link:hover,
 .contact-link:focus {
-    color: #404bbf;
+    color: #404bbf; /* Колір при наведенні */
 }
 
 /* #endregion Header */
