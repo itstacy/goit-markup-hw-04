@@ -498,6 +498,7 @@ img {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* #region Footer */
@@ -545,7 +546,6 @@ img {
     color: #F4F4FD; /* Цвет текста */
     letter-spacing: 0.02em; /* Расширение между буквами */
     max-width: 600px; /* Ширина текста для удобства чтения */
-    margin: 0 auto; /* Центрирование текста */
     padding: 0 20px; /* Внутренние отступы с боков */
     margin-bottom: 16px;
 }
