@@ -519,7 +519,6 @@ img {
 /* Информация футера */
 .footer-info {
     margin-right: 120px; /* Отступ справа для разделения элементов */
-    margin-bottom: 16px !important;
 }
 
 /* Логотип футера */
