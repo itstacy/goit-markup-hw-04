@@ -594,7 +594,7 @@ img {
 /* Стили при наведении на ссылки социальных медиа */
 .social-media-link:focus,
 .social-media-link:hover {
-    background-color: #31d0aa; /* Цвет фона при наведении и фокусе */
+    background-color: #31d0aa !important; /* Цвет фона при наведении и фокусе */
 }
 
 /* Иконки социальных медиа */
