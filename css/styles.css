@@ -367,8 +367,8 @@ img {
 }
 
 /* Hover і focus для посилання */
-.social-link:hover,
-.social-link:focus {
+.social-link:focus,
+.social-link:hover {
     background-color: #404bbf;
 }
 
@@ -592,8 +592,8 @@ img {
 }
 
 /* Стили при наведении на ссылки социальных медиа */
-.social-media-link:hover,
-.social-media-link:focus {
+.social-media-link:focus,
+.social-media-link:hover {
     background-color: #31d0aa; /* Цвет фона при наведении и фокусе */
 }
 
