@@ -369,7 +369,7 @@ img {
 /* Hover і focus для посилання */
 .social-link:focus,
 .social-link:hover {
-    background-color: #404bbf;
+    background-color: #404bbf !important;
 }
 
 /* Стиль для SVG іконки всередині посилання */
@@ -547,7 +547,7 @@ img {
     letter-spacing: 0.02em; /* Расширение между буквами */
     max-width: 600px; /* Ширина текста для удобства чтения */
     padding: 0 20px; /* Внутренние отступы с боков */
-    margin-bottom: 16px !important;;  /* Отступ снизу */
+    margin-bottom: 16px !important;  /* Отступ снизу */
 }
 
 /* Контейнер социальных медиа */
