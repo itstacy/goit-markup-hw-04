@@ -564,6 +564,8 @@ img {
     letter-spacing: 0.02em; /* Расширение между буквами */
     color: var(--text-color, #FFFFFF); /* Цвет текста через CSS переменную */
     margin-bottom: 16px; /* Отступ снизу */
+    p{
+        margin: 0;}
 }
 
 /* Список социальных медиа */
