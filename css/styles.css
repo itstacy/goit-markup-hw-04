@@ -92,8 +92,6 @@ img {
     height: 4px; /* Висота підкреслення */
     background-color: #404bbf; /* Колір фону підкреслення */
     border-radius: 2px; /* Закруглення кутів */
-    transform: scaleX(0); /* Початковий стан невидимий */
-    transition: transform 0.3s ease; /* Анімація трансформації */
 }
 
 /* Показувати підкреслення при наведенні для першого пункту меню */
@@ -166,13 +164,13 @@ img {
     height: 600px;
     padding: 188px 0;
     background-image: 
-        linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), /* Градієнт для затемнення */
-        url(../images/img-name.jpeg);
+        linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office\ 1.jpg);
     background-size: 1440px 600px;
     background-repeat: no-repeat;
     max-width: 1440px;
     background-size: cover;
     background-position: center;
+    margin: 0 auto;
 }
 .container-hero {
     padding-top: 188px;
@@ -224,6 +222,9 @@ img {
 }
 .container {
     margin-left: 156px;
+    width: 1158px;
+    margin-top: 0 auto;
+    padding: 0 15px;
 }
 .list {
     display: flex;
@@ -420,8 +421,7 @@ img {
 }
 .portfolio-item {
     width: calc((100% - 48px) / 3); /* Розрахунок ширини для кожного елемента */
-    border: 1px solid #ddd; /* Легка межа навколо зображення */
-    border-radius: 8px; /* Закруглені кути */
+    border: 1px solid #ddd; /* Легка межа навколо зображення */ 
     overflow: hidden; /* Приховати частини елемента, що виходять за межі */
     background-color: #fff; /* Білий фон */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Легка тінь для підняття */
@@ -511,7 +511,6 @@ img {
 /* Контейнер футера */
 .footer-container {
     display: flex; /* Размещение элементов по горизонтали */
-    justify-content: space-between; /* Разделение пространства между блоками */
     align-items: baseline; /* Выровнять элементы по базовой линии */
     flex-wrap: wrap; /* Перенос элементов на новую строку, если необходимо */
 }
@@ -530,8 +529,8 @@ img {
     letter-spacing: 0.03em; /* Расширение между буквами */
     text-transform: uppercase; /* Верхний регистр для всех букв */
     color: #4d5ae5; /* Цвет текста */
-
     display: inline-block; /* Блочный элемент для возможности центрирования */
+    margin-bottom: 16px ;
 }
 
 /* Часть логотипа */
@@ -544,14 +543,11 @@ img {
     line-height: 1.5; /* Межстрочний інтервал */
     color: #F4F4FD; /* Колір тексту */
     letter-spacing: 0.02em; /* Відстань між буквами */
-    max-width: 600px; /* Ширина тексту для зручності читання */
-    padding: 0 20px; /* Внутрішні відступи з боків */
- /* Відступ знизу */
+    max-width: 264px; /* Ширина тексту для зручності читання */
 }
 
 /* Контейнер социальных медиа */
 .social-media-container {
-    display: flex; /* Размещение элементов по горизонтали */
     flex-direction: column; /* Вертикальное размещение дочерних элементов */
     align-items: flex-end; /* Выравнивание по правому краю */
 }
